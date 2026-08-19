@@ -1,0 +1,165 @@
+/* EXPERIENCE SECTION */
+
+.experience {
+    padding: 100px 8%;
+    background: linear-gradient(135deg, #0a0e27 0%, #16213e 25%, #0f3460 50%, #1a1f3a 75%, #0a0e27 100%);
+    position: relative;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+.experience::before {
+  content: "";
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  top: -300px;
+  right: -300px;
+  pointer-events: none;
+}
+
+.experience::after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  bottom: -200px;
+  left: -200px;
+  pointer-events: none;
+}
+
+.experience h2 {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 3.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #f472b6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    z-index: 2;
+}
+
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.experience-card {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(168, 85, 247, 0.1));
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 18px;
+    border: 1.5px solid rgba(96, 165, 250, 0.3);
+    box-shadow: 0 10px 35px rgba(59, 130, 246, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.experience-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.1), rgba(168, 85, 247, 0.05));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-10px);
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.25), rgba(168, 85, 247, 0.2));
+    border-color: rgba(96, 165, 250, 0.6);
+    box-shadow: 0 20px 50px rgba(59, 130, 246, 0.4),
+                0 0 30px rgba(168, 85, 247, 0.2),
+                inset 0 0 20px rgba(96, 165, 250, 0.1);
+}
+
+.experience-card:hover::before {
+  opacity: 1;
+}
+
+.experience-card h3 {
+    color: #60a5fa;
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: 700;
+    position: relative;
+    z-index: 2;
+}
+
+.experience-card h4 {
+    color: #e5e7eb;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+}
+
+.experience-card span {
+    color: #a78bfa;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 2;
+}
+
+.experience-card p {
+    margin-top: 18px;
+    line-height: 1.9;
+    color: #d1d5db;
+    position: relative;
+    z-index: 2;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .experience {
+    padding: 70px 5%;
+  }
+
+  .experience h2 {
+    font-size: 2.5rem;
+    margin-bottom: 45px;
+  }
+
+  .experience-card {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience {
+    padding: 60px 4%;
+  }
+
+  .experience h2 {
+    font-size: 2rem;
+  }
+
+  .experience-card {
+    padding: 20px;
+  }
+
+  .experience-card h3 {
+    font-size: 18px;
+  }
+
+  .experience-card h4 {
+    font-size: 16px;
+  }
+}
